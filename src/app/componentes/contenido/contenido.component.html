@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <div class="row">
+        <h3>Listado de estudiantes</h3>
+        <br>
+        <table class="table">
+            <thead>
+                <th>Nro</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Estado</th>
+            </thead>
+            <tbody *ngFor="let alumno of ALUMNOS">
+                <td>{{ alumno.id}}</td>
+                <td> {{ alumno.nombre}} </td>
+                <td> {{ alumno.apellido | uppercase}}</td>
+                <td> 
+                    <span [ngClass]="alumno.estado == 'Promocionado' ? 'badge bg-success' : 'badge bg-secondary'">{{alumno.estado}}
+                    </span>
+                    </td>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+  
+
+  
